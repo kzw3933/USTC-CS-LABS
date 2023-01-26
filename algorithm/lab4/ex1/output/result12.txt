@@ -1,0 +1,729 @@
+( 0, 0 )
+Infty
+Infty
+( 0,12,22,17,24,3, 86 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 0,12, 29 )
+Infty
+Infty
+Infty
+Infty
+( 0,12,22,17, 63 )
+Infty
+Infty
+Infty
+Infty
+( 0,12,22, 37 )
+Infty
+( 0,12,22,17,24, 72 )
+Infty
+Infty
+( 1,3,0, 62 )
+( 1, 0 )
+Infty
+( 1,3, 31 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 1,3,0,12, 91 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 2, 0 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 2,13,10, 71 )
+Infty
+Infty
+( 2,13, 50 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 3,0, 31 )
+Infty
+Infty
+( 3, 0 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 3,0,12, 60 )
+Infty
+Infty
+Infty
+Infty
+( 3,0,12,22,17, 94 )
+Infty
+Infty
+Infty
+Infty
+( 3,0,12,22, 68 )
+Infty
+( 3,0,12,22,17,24, 103 )
+Infty
+Infty
+( 4,0, 10 )
+Infty
+Infty
+( 4,0,12,22,17,24,3, 96 )
+( 4, 0 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 4,0,12, 39 )
+Infty
+Infty
+Infty
+Infty
+( 4,0,12,22,17, 73 )
+Infty
+Infty
+Infty
+Infty
+( 4,0,12,22, 47 )
+Infty
+( 4,0,12,22,17,24, 82 )
+Infty
+Infty
+( 5,22,17,24,3,0, 107 )
+Infty
+Infty
+( 5,22,17,24,3, 76 )
+Infty
+( 5, 0 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 5,22,17,24,3,0,12, 136 )
+Infty
+Infty
+Infty
+Infty
+( 5,22,17, 53 )
+Infty
+Infty
+Infty
+Infty
+( 5,22, 27 )
+Infty
+( 5,22,17,24, 62 )
+Infty
+Infty
+( 6,3,0, 58 )
+Infty
+Infty
+( 6,3, 27 )
+Infty
+Infty
+( 6, 0 )
+Infty
+Infty
+Infty
+Infty
+Infty
+( 6,3,0,12, 87 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 7,2, -9 )
+Infty
+Infty
+Infty
+Infty
+( 7, 0 )
+Infty
+Infty
+( 7,2,13,10, 62 )
+Infty
+Infty
+( 7,2,13, 41 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 8,24,3,0, 60 )
+Infty
+Infty
+( 8,24,3, 29 )
+Infty
+Infty
+Infty
+Infty
+( 8, 0 )
+Infty
+Infty
+Infty
+( 8,24,3,0,12, 89 )
+Infty
+Infty
+Infty
+Infty
+( 8,24,3,0,12,22,17, 123 )
+Infty
+Infty
+Infty
+Infty
+( 8,24,3,0,12,22, 97 )
+Infty
+( 8,24, 15 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 9, 0 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 9,17, 40 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 10, 0 )
+Infty
+Infty
+( 10,13, 40 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 11,20,4,0, 43 )
+Infty
+Infty
+( 11,20,4,0,12,22,17,24,3, 129 )
+( 11,20,4, 33 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 11, 0 )
+( 11,20,4,0,12, 72 )
+Infty
+Infty
+Infty
+Infty
+( 11,20,4,0,12,22,17, 106 )
+Infty
+Infty
+( 11,20, 25 )
+Infty
+( 11,20,4,0,12,22, 80 )
+Infty
+( 11,20,4,0,12,22,17,24, 115 )
+Infty
+Infty
+( 12,22,17,24,3,0, 88 )
+Infty
+Infty
+( 12,22,17,24,3, 57 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 12, 0 )
+Infty
+Infty
+Infty
+Infty
+( 12,22,17, 34 )
+Infty
+Infty
+Infty
+Infty
+( 12,22, 8 )
+Infty
+( 12,22,17,24, 43 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 13,10, 21 )
+Infty
+Infty
+( 13, 0 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 14,3,0, 64 )
+Infty
+Infty
+( 14,3, 33 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 14,3,0,12, 93 )
+Infty
+( 14, 0 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 15,0, 29 )
+Infty
+Infty
+( 15,0,12,22,17,24,3, 115 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 15,0,12, 58 )
+Infty
+Infty
+( 15, 0 )
+Infty
+( 15,0,12,22,17, 92 )
+Infty
+Infty
+Infty
+Infty
+( 15,0,12,22, 66 )
+Infty
+( 15,0,12,22,17,24, 101 )
+Infty
+Infty
+( 16,14,3,0, 87 )
+Infty
+Infty
+( 16,14,3, 56 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 16,14,3,0,12, 116 )
+Infty
+( 16,14, 23 )
+Infty
+( 16, 0 )
+( 16,14,3,0,12,22,17, 150 )
+Infty
+Infty
+Infty
+Infty
+( 16,14,3,0,12,22, 124 )
+Infty
+( 16,14,3,0,12,22,17,24, 159 )
+Infty
+Infty
+( 17,24,3,0, 54 )
+Infty
+Infty
+( 17,24,3, 23 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 17,24,3,0,12, 83 )
+Infty
+Infty
+Infty
+Infty
+( 17, 0 )
+Infty
+Infty
+Infty
+Infty
+( 17,24,3,0,12,22, 91 )
+Infty
+( 17,24, 9 )
+Infty
+Infty
+( 18,5,22,17,24,3,0, 97 )
+Infty
+Infty
+( 18,5,22,17,24,3, 66 )
+Infty
+( 18,5, -10 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 18,5,22,17,24,3,0,12, 126 )
+Infty
+Infty
+Infty
+Infty
+( 18,5,22,17, 43 )
+( 18, 0 )
+Infty
+Infty
+Infty
+( 18,5,22, 17 )
+Infty
+( 18,5,22,17,24, 52 )
+Infty
+Infty
+( 19,18,5,22,17,24,3,0, 144 )
+Infty
+Infty
+( 19,18,5,22,17,24,3, 113 )
+Infty
+( 19,18,5, 37 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 19,18,5,22,17,24,3,0,12, 173 )
+Infty
+Infty
+Infty
+Infty
+( 19,18,5,22,17, 90 )
+( 19,18, 47 )
+( 19, 0 )
+Infty
+Infty
+( 19,18,5,22, 64 )
+Infty
+( 19,18,5,22,17,24, 99 )
+Infty
+Infty
+( 20,4,0, 18 )
+Infty
+Infty
+Infty
+( 20,4, 8 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 20,4,0,12, 47 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 20, 0 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 21,17, 49 )
+Infty
+Infty
+Infty
+( 21, 0 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 22,17, 26 )
+Infty
+Infty
+Infty
+Infty
+( 22, 0 )
+Infty
+Infty
+Infty
+Infty
+( 23,0, -7 )
+Infty
+Infty
+( 23,0,12,22,17,24,3, 79 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 23,0,12, 22 )
+Infty
+Infty
+Infty
+Infty
+( 23,0,12,22,17, 56 )
+Infty
+Infty
+Infty
+Infty
+( 23,0,12,22, 30 )
+( 23, 0 )
+( 23,0,12,22,17,24, 65 )
+Infty
+Infty
+( 24,3,0, 45 )
+Infty
+Infty
+( 24,3, 14 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 24,3,0,12, 74 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 24, 0 )
+Infty
+Infty
+( 25,1,3,0, 75 )
+( 25,1, 13 )
+Infty
+( 25,1,3, 44 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 25,1,3,0,12, 104 )
+Infty
+Infty
+Infty
+Infty
+( 25,1,3,0,12,22,17, 138 )
+Infty
+Infty
+Infty
+Infty
+( 25,1,3,0,12,22, 112 )
+Infty
+( 25,1,3,0,12,22,17,24, 147 )
+( 25, 0 )
+Infty
+( 26,0, 51 )
+Infty
+Infty
+( 26,0,12,22,17,24,3, 137 )
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+Infty
+( 26,0,12, 80 )
+Infty
+Infty
+Infty
+Infty
+( 26,0,12,22,17, 114 )
+Infty
+Infty
+Infty
+Infty
+( 26,0,12,22, 88 )
+Infty
+( 26,0,12,22,17,24, 123 )
+Infty
+( 26, 0 )
