@@ -1,0 +1,6 @@
+numsacle(3) time costs: 0.000003 s
+numsacle(6) time costs: 0.000024 s
+numsacle(9) time costs: 0.000258 s
+numsacle(12) time costs: 0.002712 s
+numsacle(15) time costs: 0.023700 s
+numsacle(18) time costs: 0.089720 s
