@@ -1,0 +1,10 @@
+movie_id2fb_file = "C:\\Users\\Administrator\\Desktop\\WebInfo\\lab2\\src\\stage1\\data\\douban2fb.txt"
+freebase_file = "C:\\Users\\Administrator\\Desktop\\WebInfo\\lab2\\src\\stage1\\data\\freebase_douban.gz"
+movie_tag_file = "C:\\Users\\Administrator\\Desktop\\WebInfo\\lab2\\src\\stage1\\data\\Movie_tag.csv"
+extract_KG_by_movie_entitys_raw_file = "C:\\Users\\Administrator\\Desktop\\WebInfo\\lab2\\src\\stage1\\data\\extract_KG_by_movie_entitys_raw.txt"
+extract_KG_by_movie_entitys_file = "C:\\Users\\Administrator\\Desktop\\WebInfo\\lab2\\src\\stage1\\data\\extract_KG_by_movie_entitys.txt"
+extract_KG_by_extend_entitys_raw_file = "C:\\Users\\Administrator\\Desktop\\WebInfo\\lab2\\src\\stage1\\data\\extract_KG_by_extend_entitys_raw.txt"
+extract_KG_by_extend_entitys_file = "C:\\Users\\Administrator\\Desktop\\WebInfo\\lab2\\src\\stage1\\data\\extract_KG_by_extend_entitys.txt"
+extend_KG_by_tag_file = "C:\\Users\\Administrator\\Desktop\\WebInfo\\lab2\\src\\stage1\\data\\extend_KG_by_tag.txt"
+
+extract_KG_file = "C:\\Users\\Administrator\\Desktop\\WebInfo\\lab2\\src\\stage1\\data\\extract_KG.txt"
