@@ -1,0 +1,250 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> EXPR
+Rule 1     EXPR -> ORLIST
+Rule 2     ORLIST -> ORLIST OR ANDLIST
+Rule 3     ORLIST -> ANDLIST
+Rule 4     ANDLIST -> ANDLIST AND LIST
+Rule 5     ANDLIST -> LIST
+Rule 6     LIST -> LPAREN ORLIST RPAREN
+Rule 7     LIST -> NOT LPAREN ORLIST RPAREN
+Rule 8     LIST -> NAME
+Rule 9     LIST -> NOT NAME
+
+Terminals, with rules where they appear
+
+AND                  : 4
+LPAREN               : 6 7
+NAME                 : 8 9
+NOT                  : 7 9
+OR                   : 2
+RPAREN               : 6 7
+error                : 
+
+Nonterminals, with rules where they appear
+
+ANDLIST              : 2 3 4
+EXPR                 : 0
+LIST                 : 4 5
+ORLIST               : 1 2 6 7
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . EXPR
+    (1) EXPR -> . ORLIST
+    (2) ORLIST -> . ORLIST OR ANDLIST
+    (3) ORLIST -> . ANDLIST
+    (4) ANDLIST -> . ANDLIST AND LIST
+    (5) ANDLIST -> . LIST
+    (6) LIST -> . LPAREN ORLIST RPAREN
+    (7) LIST -> . NOT LPAREN ORLIST RPAREN
+    (8) LIST -> . NAME
+    (9) LIST -> . NOT NAME
+
+    LPAREN          shift and go to state 5
+    NOT             shift and go to state 6
+    NAME            shift and go to state 7
+
+    EXPR                           shift and go to state 1
+    ORLIST                         shift and go to state 2
+    ANDLIST                        shift and go to state 3
+    LIST                           shift and go to state 4
+
+state 1
+
+    (0) S' -> EXPR .
+
+
+
+state 2
+
+    (1) EXPR -> ORLIST .
+    (2) ORLIST -> ORLIST . OR ANDLIST
+
+    $end            reduce using rule 1 (EXPR -> ORLIST .)
+    OR              shift and go to state 8
+
+
+state 3
+
+    (3) ORLIST -> ANDLIST .
+    (4) ANDLIST -> ANDLIST . AND LIST
+
+    OR              reduce using rule 3 (ORLIST -> ANDLIST .)
+    $end            reduce using rule 3 (ORLIST -> ANDLIST .)
+    RPAREN          reduce using rule 3 (ORLIST -> ANDLIST .)
+    AND             shift and go to state 9
+
+
+state 4
+
+    (5) ANDLIST -> LIST .
+
+    AND             reduce using rule 5 (ANDLIST -> LIST .)
+    OR              reduce using rule 5 (ANDLIST -> LIST .)
+    $end            reduce using rule 5 (ANDLIST -> LIST .)
+    RPAREN          reduce using rule 5 (ANDLIST -> LIST .)
+
+
+state 5
+
+    (6) LIST -> LPAREN . ORLIST RPAREN
+    (2) ORLIST -> . ORLIST OR ANDLIST
+    (3) ORLIST -> . ANDLIST
+    (4) ANDLIST -> . ANDLIST AND LIST
+    (5) ANDLIST -> . LIST
+    (6) LIST -> . LPAREN ORLIST RPAREN
+    (7) LIST -> . NOT LPAREN ORLIST RPAREN
+    (8) LIST -> . NAME
+    (9) LIST -> . NOT NAME
+
+    LPAREN          shift and go to state 5
+    NOT             shift and go to state 6
+    NAME            shift and go to state 7
+
+    ORLIST                         shift and go to state 10
+    ANDLIST                        shift and go to state 3
+    LIST                           shift and go to state 4
+
+state 6
+
+    (7) LIST -> NOT . LPAREN ORLIST RPAREN
+    (9) LIST -> NOT . NAME
+
+    LPAREN          shift and go to state 11
+    NAME            shift and go to state 12
+
+
+state 7
+
+    (8) LIST -> NAME .
+
+    AND             reduce using rule 8 (LIST -> NAME .)
+    OR              reduce using rule 8 (LIST -> NAME .)
+    $end            reduce using rule 8 (LIST -> NAME .)
+    RPAREN          reduce using rule 8 (LIST -> NAME .)
+
+
+state 8
+
+    (2) ORLIST -> ORLIST OR . ANDLIST
+    (4) ANDLIST -> . ANDLIST AND LIST
+    (5) ANDLIST -> . LIST
+    (6) LIST -> . LPAREN ORLIST RPAREN
+    (7) LIST -> . NOT LPAREN ORLIST RPAREN
+    (8) LIST -> . NAME
+    (9) LIST -> . NOT NAME
+
+    LPAREN          shift and go to state 5
+    NOT             shift and go to state 6
+    NAME            shift and go to state 7
+
+    ANDLIST                        shift and go to state 13
+    LIST                           shift and go to state 4
+
+state 9
+
+    (4) ANDLIST -> ANDLIST AND . LIST
+    (6) LIST -> . LPAREN ORLIST RPAREN
+    (7) LIST -> . NOT LPAREN ORLIST RPAREN
+    (8) LIST -> . NAME
+    (9) LIST -> . NOT NAME
+
+    LPAREN          shift and go to state 5
+    NOT             shift and go to state 6
+    NAME            shift and go to state 7
+
+    LIST                           shift and go to state 14
+
+state 10
+
+    (6) LIST -> LPAREN ORLIST . RPAREN
+    (2) ORLIST -> ORLIST . OR ANDLIST
+
+    RPAREN          shift and go to state 15
+    OR              shift and go to state 8
+
+
+state 11
+
+    (7) LIST -> NOT LPAREN . ORLIST RPAREN
+    (2) ORLIST -> . ORLIST OR ANDLIST
+    (3) ORLIST -> . ANDLIST
+    (4) ANDLIST -> . ANDLIST AND LIST
+    (5) ANDLIST -> . LIST
+    (6) LIST -> . LPAREN ORLIST RPAREN
+    (7) LIST -> . NOT LPAREN ORLIST RPAREN
+    (8) LIST -> . NAME
+    (9) LIST -> . NOT NAME
+
+    LPAREN          shift and go to state 5
+    NOT             shift and go to state 6
+    NAME            shift and go to state 7
+
+    ORLIST                         shift and go to state 16
+    ANDLIST                        shift and go to state 3
+    LIST                           shift and go to state 4
+
+state 12
+
+    (9) LIST -> NOT NAME .
+
+    AND             reduce using rule 9 (LIST -> NOT NAME .)
+    OR              reduce using rule 9 (LIST -> NOT NAME .)
+    $end            reduce using rule 9 (LIST -> NOT NAME .)
+    RPAREN          reduce using rule 9 (LIST -> NOT NAME .)
+
+
+state 13
+
+    (2) ORLIST -> ORLIST OR ANDLIST .
+    (4) ANDLIST -> ANDLIST . AND LIST
+
+    OR              reduce using rule 2 (ORLIST -> ORLIST OR ANDLIST .)
+    $end            reduce using rule 2 (ORLIST -> ORLIST OR ANDLIST .)
+    RPAREN          reduce using rule 2 (ORLIST -> ORLIST OR ANDLIST .)
+    AND             shift and go to state 9
+
+
+state 14
+
+    (4) ANDLIST -> ANDLIST AND LIST .
+
+    AND             reduce using rule 4 (ANDLIST -> ANDLIST AND LIST .)
+    OR              reduce using rule 4 (ANDLIST -> ANDLIST AND LIST .)
+    $end            reduce using rule 4 (ANDLIST -> ANDLIST AND LIST .)
+    RPAREN          reduce using rule 4 (ANDLIST -> ANDLIST AND LIST .)
+
+
+state 15
+
+    (6) LIST -> LPAREN ORLIST RPAREN .
+
+    AND             reduce using rule 6 (LIST -> LPAREN ORLIST RPAREN .)
+    OR              reduce using rule 6 (LIST -> LPAREN ORLIST RPAREN .)
+    $end            reduce using rule 6 (LIST -> LPAREN ORLIST RPAREN .)
+    RPAREN          reduce using rule 6 (LIST -> LPAREN ORLIST RPAREN .)
+
+
+state 16
+
+    (7) LIST -> NOT LPAREN ORLIST . RPAREN
+    (2) ORLIST -> ORLIST . OR ANDLIST
+
+    RPAREN          shift and go to state 17
+    OR              shift and go to state 8
+
+
+state 17
+
+    (7) LIST -> NOT LPAREN ORLIST RPAREN .
+
+    AND             reduce using rule 7 (LIST -> NOT LPAREN ORLIST RPAREN .)
+    OR              reduce using rule 7 (LIST -> NOT LPAREN ORLIST RPAREN .)
+    $end            reduce using rule 7 (LIST -> NOT LPAREN ORLIST RPAREN .)
+    RPAREN          reduce using rule 7 (LIST -> NOT LPAREN ORLIST RPAREN .)
+
