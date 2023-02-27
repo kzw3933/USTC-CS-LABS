@@ -1,0 +1,9 @@
+int main(void a,int b){
+    /*** test 
+    example///
+
+    */
+    a = 4;
+    b = 3;
+    return a+b;
+}
