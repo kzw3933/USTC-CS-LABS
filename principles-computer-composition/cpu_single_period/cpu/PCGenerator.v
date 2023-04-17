@@ -14,8 +14,6 @@ module PCGenerator(
         else begin
             NPC <= br_taken ? br_target :
                             PC_4;
-
-
         end
     end
 

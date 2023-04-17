@@ -1,5 +1,5 @@
 module MMIO(
-    input   [7:0]   dm_addr,
+    input   [31:0]  dm_addr,
     input           dm_r_en,
     input   [31:0]  dm_r_data_raw,
     input   [31:0]  dm_r_data_dev,

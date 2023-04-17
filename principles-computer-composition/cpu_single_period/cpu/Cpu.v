@@ -5,16 +5,16 @@ module Cpu(
     input               clk,
     input               rstn,
     //IO_BUS
-    output  [7:0]       io_addr,     //led和seg的数�???
-    output  [31:0]      io_dout,     //输出led和seg的数�???
-    output              io_we,       //输出led和seg数据的使能信�???
+    output  [7:0]       io_addr,     //led和seg的数据
+    output  [31:0]      io_dout,     //输出led和seg的数据
+    output              io_we,       //输出led和seg数据的使能信号
     output              io_rd,       //输入数据时的使能信号
-    input   [31:0]      io_din,      //来自sw的输入数�???
+    input   [31:0]      io_din,      //来自sw的输入数据
     //Debug_BUS
-    output  [31:0]      debug_pc,          //PC的内�???
-    input   [7:0]       debug_dm_rf_addr,  //数据寄存器或寄存器堆的调试读口地�???
-    output  [31:0]      debug_rf_data,     //从RF读取的数�???
-    output  [31:0]      debug_dm_data      //从DM读取的数�???
+    output  [31:0]      debug_pc,          //PC的内容
+    input   [7:0]       debug_dm_rf_addr,  //数据寄存器或寄存器堆的调试读口地址
+    output  [31:0]      debug_rf_data,     //从RF读取的数据
+    output  [31:0]      debug_dm_data      //从DM读取的数据
     );
     
     
@@ -26,9 +26,11 @@ module Cpu(
     wire                alu_src2_is_4;
     wire                alu_src2_is_imm;
     wire    [2:0]       imm_type;
-    wire                alu_op;
-    wire                alu_jal;
-    wire                alu_beq;
+    wire    [1:0]       alu_op;
+    wire                br_jal;
+    wire                br_beq;
+    wire                br_blt;
+    wire                br_bltu;
     wire                mem_to_reg;
     wire                reg_w_en;
     wire                dm_w_en;
@@ -47,7 +49,6 @@ module Cpu(
     wire        [31:0]  alu_src1_value;
     wire        [31:0]  alu_src2_value;
     wire        [31:0]  alu_out;
-    wire                alu_zero;
 
     wire                br_taken;
     wire        [31:0]  br_target;
@@ -91,8 +92,10 @@ module Cpu(
         .alu_src2_is_4(alu_src2_is_4),
         .imm_type(imm_type),
         .alu_op(alu_op),
-        .alu_jal(alu_jal),
-        .alu_beq(alu_beq),
+        .br_jal(br_jal),
+        .br_beq(br_beq),
+        .br_blt(br_blt),
+        .br_bltu(br_bltu),
         .mem_to_reg(mem_to_reg),
         .reg_w_en(reg_w_en),
         .dm_w_en(dm_w_en),
@@ -122,30 +125,38 @@ module Cpu(
     assign alu_src1_value = alu_src1_is_pc ? PC :
                                             rs_value;
     assign alu_src2_value = alu_src2_is_4 ? 32'h4 :
-                                            alu_src2_is_imm ? Imm :
-                                                            rt_value; 
+                            alu_src2_is_imm ? Imm :
+                            rt_value; 
 
     ALU ALU(
         .alu_src1(alu_src1_value),
         .alu_src2(alu_src2_value),
-        .alu_beq(alu_beq),
-        .alu_jal(alu_jal),
         .alu_op(alu_op),
-        .alu_out(alu_out),
-        .alu_zero(alu_zero)
+        .alu_out(alu_out)
     );
 
     BranchDecision BranchDecision(
-        .alu_zero(alu_zero),
-        .alu_beq(alu_beq),
-        .alu_jal(alu_jal),
+        .src1(alu_src1_value),
+        .src2(alu_src2_value),
+        .beq(br_beq),
+        .jal(br_jal),
+        .blt(br_blt),
+        .bltu(br_bltu),
         .br_taken(br_taken)
     );
 
     assign br_target = PC + (Imm <<1);
     
 
-    DataMemory  DataMemory(.a(alu_out[7:0]),.d(dm_w_data),.dpra(debug_dm_addr),.dpo(debug_dm_data),.clk(clk),.we(dm_w_en&(!dm_w_dev_en)),.spo(dm_r_data_raw));
+    DataMemory  DataMemory(
+        .a(alu_out[7:0]),
+        .d(dm_w_data),
+        .dpra(debug_dm_addr),
+        .dpo(debug_dm_data),
+        .clk(clk),
+        .we(dm_w_en&(!dm_w_dev_en)),
+        .spo(dm_r_data_raw)
+        );
 
     assign dm_w_data     = rt_value;
     assign dm_r_data_dev = io_din;
@@ -155,7 +166,7 @@ module Cpu(
     assign io_dout       = dm_w_data;
 
     MMIO   MMIO(
-        .dm_addr(alu_out[7:0]),
+        .dm_addr(alu_out[31:0]),
         .dm_r_en(dm_r_en),
         .dm_r_data_raw(dm_r_data_raw),
         .dm_r_data_dev(dm_r_data_dev),
