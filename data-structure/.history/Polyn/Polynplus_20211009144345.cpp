@@ -1,0 +1,163 @@
+#include<stdio.h>
+#include<stdlib.h>
+//定义需要的数据类型
+typedef struct PolynNode{
+	float coef;
+	int expn;
+	struct PolynNode *next;
+}PolynNode,*PolynList;
+
+//定义相关的功能函数
+void ShowChoices();
+
+void CreatePolyn(PolynList );
+void InsertPolyn(PolynList, PolynNode *);
+
+void AddPolyn(PolynList,PolynList);
+void SubPolyn(PolynList,PolynList);
+
+void ValuePolyn(PolynList);
+void DerivatPolyn(PolynList); 
+void MultiplyPolyn(PolynList,PolynList);
+
+void PrintPolyn(PolynList);
+
+int Cmp(int ,int);
+
+
+
+//主函数
+int main(){
+	printf("*************欢迎进入多项式计算系统************\n\n");
+	printf("现提供以下服务\n");
+    ShowChoices();
+	unsigned int choice;
+	scanf("%d",&choice);
+    int i=0;
+	PolynList P1=(PolynNode *)malloc(sizeof(struct PolynNode));
+    P1->next = NULL;
+	P1->expn = 0;
+    PolynList P2=(PolynNode *)malloc(sizeof(struct PolynNode));
+    P2->next = NULL;
+	P2->expn = 0;
+    while (true)
+    {
+       switch(choice)
+       {
+			case 0:	return 0;
+			case 1:if(i==0){
+                    CreatePolyn(P1);i=1;
+                    }               //第一个多项式同时作为结果多项式
+                    else if(i==1)  CreatePolyn(P2) ;   //第二个多项式同时作为之后的输入存储多项式
+				    ShowChoices();
+				    scanf("%d",&choice);
+				    break;
+			case 2:AddPolyn(P1,P2);
+				    ShowChoices();
+				    scanf("%d",&choice);
+				    break;
+			case 3:SubPolyn(P1,P2);
+				    ShowChoices();
+				    scanf("%d",&choice);
+				    break;	
+            case 4:ValuePolyn(P1);
+                    ShowChoices();
+                    scanf("%d",&choice);
+                    break;
+            case 5:DerivatPolyn(P1);
+                    ShowChoices();
+                    scanf("%d",&choice);
+                    break;
+            case 6:MultiplyPolyn(P1,P2);
+                    ShowChoices();
+                    scanf("%d",&choice);
+                    break;
+        }
+    }
+}
+
+//功能函数的实现
+void ShowChoices()
+{
+    printf("\n");
+	printf("                        0:退出多项式计算系统                            \n");
+	printf("         1:创建多项式         ");printf("            2:多项式加法         \n");
+	printf("         3:多项式减法         ");printf("            4:多项式求值         \n");
+    printf("         5:多项式求导         ");printf("            6:多项式乘法         \n");
+	printf("请选择:\n");
+}
+
+void CreatePolyn(PolynList P)
+{
+	printf("请输入多项式系数与指数对，键入回车结束输入\n");
+	float coef;
+	int expn;
+    char c;
+	struct PolynNode *NewNode;
+	while(true)
+    {
+        NewNode = (struct PolynNode *)malloc(sizeof(struct PolynNode));  
+        scanf("%f %d",&NewNode->coef,&NewNode->expn);            
+        NewNode->next = NULL;
+        InsertPolyn(P,NewNode);
+        c=getchar();
+        if(c=='\n') break;	
+    }
+    printf("创建完成。\n");
+}
+
+void InsertPolyn(PolynList P,PolynNode *Node){
+	PolynNode *Pa = P;        //定义一个前向指针
+    while(Pa->next &&Pa->next->expn > Node->expn ) Pa=Pa->next;  //找到指数比插入节点大的最后一个节点,下一个节点相等或更小或为空
+    if(Pa->next&&Pa->next->expn == Node->expn) {
+          Pa->next->coef+=Node->coef;
+          if(Pa->next->coef == 0 && P->expn >1)  {
+                PolynNode *Pt = Pa->next; 
+                Pa->next = Pt->next;
+                free(Pt);
+                P->expn-=1;
+          } 
+        if(Pa->next->coef == 0 && P->expn ==1) {
+            Pa->next->expn = 0;
+        }
+    }  
+    else {
+        Node->next = Pa->next;
+        Pa->next = Node;
+        P->expn+=1;           //增加一项
+    }
+}
+
+void AddPolyn(PolynList Pa,PolynList Pb){   //多项式按指数降序排列
+	struct PolynNode *ha=Pa;             //定义前向指针
+	struct PolynNode *hat=ha->next;        //定义移动指针,初始指向第一个节点
+	struct PolynNode *hbt=Pb->next;         //定义移动指针,初始指向第一个节点
+
+	while(hat&&hbt){
+	    switch(cmp(hat->expn,hbt->expn)){
+	        case 0: hat->coef += hbt->coef;
+		            Pb->next = hbt->next;
+		            free(hbt);
+		            Pb->expn-=1;
+		            hbt=Pb->next;
+		            if(hat->coef ==0&&Pa->expn>1){
+                        ha->next=hat->next;
+                        free(hat);
+                        hat=ha->next;
+                        Pa->expn-=1;
+                        }
+		            if(hat->coef ==0&&Pa->expn==1)  Pa->next->expn=0;
+		            else {
+		                ha=ha->next;
+                        hat=ha->next;
+                    }
+		            break;
+	        case 1: ha=ha->next;hat=hat->next;break;
+            case -1:Pb->next =hbt->next;hbt->next = hat;ha->next=hbt;hbt = Pb->next;ha=ha->next;Pa->expn+=1;Pb->expn-=1;break;
+}
+	
+}
+    if(hbt) {ha->next = hbt; Pa->expn+=Pb->expn;Pb->next=NULL;Pb->expn=0;}  
+    PrintPolyn(Pa);
+
+}
