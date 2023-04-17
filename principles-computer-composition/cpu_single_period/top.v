@@ -10,7 +10,8 @@ module top(
        output               pause,
        output       [15:0]  led,
        output       [7:0]   an,
-       output       [6:0]   seg
+       output       [6:0]   seg,
+       output       [2:0]   seg_sel
 );
 
 wire                clk_cpu;
@@ -149,6 +150,7 @@ Pdu Pdu(
     .led(led),
     .an(an),
     .seg(seg),
+    .seg_sel(seg_sel),
     .io_addr(io_addr),
     .io_dout(io_dout),
     .io_we(io_we),
@@ -172,8 +174,6 @@ Cpu Cpu(
     .debug_rf_data(rf_data),
     .debug_dm_data(dm_data)
 );
-
-
 
 
 

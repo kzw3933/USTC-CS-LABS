@@ -6,9 +6,12 @@
     `define B_TYPE 3'h2
     `define J_TYPE 3'h3
     `define S_TYPE 3'h4
+    `define U_TYPE 3'h5
 //Alu-Op
-    `define ALU_ADD 1'h0
-    `define ALU_SUB 1'h1
+    `define ALU_ADD 2'h0
+    `define ALU_SUB 2'h1
+    `define ALU_OP1 2'h2
+    `define ALU_OP2 2'h3
 //Cpu-Mode
     `define CPU_PAUSE 2'h0
     `define CPU_CONT  2'h1
