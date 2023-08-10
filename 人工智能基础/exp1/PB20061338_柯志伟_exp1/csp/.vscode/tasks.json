@@ -1,0 +1,21 @@
+// 此文件主要是编译.c或.cpp文件用的命令
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "make -C ${workspaceFolder}/src",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "make -C ${workspaceFolder}/src clean"
+        }
+    ]
+}

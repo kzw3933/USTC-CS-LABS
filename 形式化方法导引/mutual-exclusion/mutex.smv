@@ -1,0 +1,64 @@
+MODULE main
+    VAR 
+        st: array 0..1 of {c, n, t};
+    ASSIGN
+        init(st[0]) := n;
+        init(st[1]) := n;
+    TRANS
+        st[0] = n & st[1] = n -> (next(st[0]) = t & next(st[1]) = n) |
+                                 (next(st[0]) = n & next(st[1]) = t);
+    TRANS
+        st[0] = t & st[1] = n -> (next(st[0]) = c & next(st[1]) = n) |
+                                 (next(st[0]) = t & next(st[1]) = t);
+    TRANS
+        st[0] = n & st[1] = t -> (next(st[0]) = t & next(st[1]) = t) |
+                                 (next(st[0]) = n & next(st[1]) = c);
+    TRANS
+        st[0] = c & st[1] = n -> (next(st[0]) = n & next(st[1]) = n) |
+                                 (next(st[0]) = c & next(st[1]) = t);
+    TRANS
+        st[0] = t & st[1] = t -> (next(st[0]) = c & next(st[1]) = t) |
+                                 (next(st[0]) = t & next(st[1]) = c);
+    TRANS
+        st[0] = n & st[1] = c -> (next(st[0]) = t & next(st[1]) = c) |
+                                 (next(st[0]) = n & next(st[1]) = n);
+    TRANS
+        st[0] = c & st[1] = t -> (next(st[0]) = n & next(st[1]) = t); 
+
+    TRANS
+        st[0] = t & st[1] = c -> (next(st[0]) = t & next(st[1]) = n);
+
+    -- safety
+    CTLSPEC
+        AG!(st[0] = c & st[1] = c);
+
+    -- liveness
+    CTLSPEC
+        AG(st[0] = t -> AF(st[0] = c));
+    CTLSPEC
+        AG(st[1] = t -> AF(st[1] = c));
+
+    -- non-blocking
+    CTLSPEC
+        AG(st[0] = n -> EF(st[0] = t));
+    CTLSPEC
+        AG(st[1] = n -> EF(st[1] = t));
+
+    -- no strict sequencing
+    -- LTLSPEC
+    --     G(st[0] = c -> (G st[0] = c | (st[0] = c  U (st[0] != c & G st[0] != c | ((st[0] != c) U st[1] = c)))));
+    CTLSPEC
+        -- EF((st[0]=c) -> E[(st[0]=c) U E[(st[0]!=c & st[1]!=c)U(st[0]=c)]]);
+        AG(st[0] = c -> (AG(st[0] = c) | A[st[0] = c U (st[0] != c & AG(st[0] != c) | A[st[0] != c U st[1] =c])]));
+        
+
+
+    
+
+    
+
+    
+
+        
+        
+

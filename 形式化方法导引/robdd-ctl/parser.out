@@ -1,0 +1,1122 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> expression
+Rule 1     expression -> TRUE
+Rule 2     expression -> FALSE
+Rule 3     expression -> VAR
+Rule 4     expression -> NOT expression
+Rule 5     expression -> expression AND expression
+Rule 6     expression -> expression OR expression
+Rule 7     expression -> expression IMPLIES expression
+Rule 8     expression -> expression IFF expression
+Rule 9     expression -> AX expression
+Rule 10    expression -> EX expression
+Rule 11    expression -> AF expression
+Rule 12    expression -> EF expression
+Rule 13    expression -> AG expression
+Rule 14    expression -> EG expression
+Rule 15    expression -> A LBRACKET expression U expression RBRACKET
+Rule 16    expression -> E LBRACKET expression U expression RBRACKET
+Rule 17    expression -> LPAREN expression RPAREN
+
+Terminals, with rules where they appear
+
+A                    : 15
+AF                   : 11
+AG                   : 13
+AND                  : 5
+AX                   : 9
+E                    : 16
+EF                   : 12
+EG                   : 14
+EX                   : 10
+FALSE                : 2
+IFF                  : 8
+IMPLIES              : 7
+LBRACKET             : 15 16
+LPAREN               : 17
+NOT                  : 4
+OR                   : 6
+RBRACKET             : 15 16
+RPAREN               : 17
+TRUE                 : 1
+U                    : 15 16
+VAR                  : 3
+error                : 
+
+Nonterminals, with rules where they appear
+
+expression           : 4 5 5 6 6 7 7 8 8 9 10 11 12 13 14 15 15 16 16 17 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . expression
+    (1) expression -> . TRUE
+    (2) expression -> . FALSE
+    (3) expression -> . VAR
+    (4) expression -> . NOT expression
+    (5) expression -> . expression AND expression
+    (6) expression -> . expression OR expression
+    (7) expression -> . expression IMPLIES expression
+    (8) expression -> . expression IFF expression
+    (9) expression -> . AX expression
+    (10) expression -> . EX expression
+    (11) expression -> . AF expression
+    (12) expression -> . EF expression
+    (13) expression -> . AG expression
+    (14) expression -> . EG expression
+    (15) expression -> . A LBRACKET expression U expression RBRACKET
+    (16) expression -> . E LBRACKET expression U expression RBRACKET
+    (17) expression -> . LPAREN expression RPAREN
+
+    TRUE            shift and go to state 2
+    FALSE           shift and go to state 3
+    VAR             shift and go to state 4
+    NOT             shift and go to state 5
+    AX              shift and go to state 6
+    EX              shift and go to state 7
+    AF              shift and go to state 8
+    EF              shift and go to state 9
+    AG              shift and go to state 10
+    EG              shift and go to state 11
+    A               shift and go to state 12
+    E               shift and go to state 13
+    LPAREN          shift and go to state 14
+
+    expression                     shift and go to state 1
+
+state 1
+
+    (0) S' -> expression .
+    (5) expression -> expression . AND expression
+    (6) expression -> expression . OR expression
+    (7) expression -> expression . IMPLIES expression
+    (8) expression -> expression . IFF expression
+
+    AND             shift and go to state 15
+    OR              shift and go to state 16
+    IMPLIES         shift and go to state 17
+    IFF             shift and go to state 18
+
+
+state 2
+
+    (1) expression -> TRUE .
+
+    AND             reduce using rule 1 (expression -> TRUE .)
+    OR              reduce using rule 1 (expression -> TRUE .)
+    IMPLIES         reduce using rule 1 (expression -> TRUE .)
+    IFF             reduce using rule 1 (expression -> TRUE .)
+    $end            reduce using rule 1 (expression -> TRUE .)
+    RPAREN          reduce using rule 1 (expression -> TRUE .)
+    U               reduce using rule 1 (expression -> TRUE .)
+    RBRACKET        reduce using rule 1 (expression -> TRUE .)
+
+
+state 3
+
+    (2) expression -> FALSE .
+
+    AND             reduce using rule 2 (expression -> FALSE .)
+    OR              reduce using rule 2 (expression -> FALSE .)
+    IMPLIES         reduce using rule 2 (expression -> FALSE .)
+    IFF             reduce using rule 2 (expression -> FALSE .)
+    $end            reduce using rule 2 (expression -> FALSE .)
+    RPAREN          reduce using rule 2 (expression -> FALSE .)
+    U               reduce using rule 2 (expression -> FALSE .)
+    RBRACKET        reduce using rule 2 (expression -> FALSE .)
+
+
+state 4
+
+    (3) expression -> VAR .
+
+    AND             reduce using rule 3 (expression -> VAR .)
+    OR              reduce using rule 3 (expression -> VAR .)
+    IMPLIES         reduce using rule 3 (expression -> VAR .)
+    IFF             reduce using rule 3 (expression -> VAR .)
+    $end            reduce using rule 3 (expression -> VAR .)
+    RPAREN          reduce using rule 3 (expression -> VAR .)
+    U               reduce using rule 3 (expression -> VAR .)
+    RBRACKET        reduce using rule 3 (expression -> VAR .)
+
+
+state 5
+
+    (4) expression -> NOT . expression
+    (1) expression -> . TRUE
+    (2) expression -> . FALSE
+    (3) expression -> . VAR
+    (4) expression -> . NOT expression
+    (5) expression -> . expression AND expression
+    (6) expression -> . expression OR expression
+    (7) expression -> . expression IMPLIES expression
+    (8) expression -> . expression IFF expression
+    (9) expression -> . AX expression
+    (10) expression -> . EX expression
+    (11) expression -> . AF expression
+    (12) expression -> . EF expression
+    (13) expression -> . AG expression
+    (14) expression -> . EG expression
+    (15) expression -> . A LBRACKET expression U expression RBRACKET
+    (16) expression -> . E LBRACKET expression U expression RBRACKET
+    (17) expression -> . LPAREN expression RPAREN
+
+    TRUE            shift and go to state 2
+    FALSE           shift and go to state 3
+    VAR             shift and go to state 4
+    NOT             shift and go to state 5
+    AX              shift and go to state 6
+    EX              shift and go to state 7
+    AF              shift and go to state 8
+    EF              shift and go to state 9
+    AG              shift and go to state 10
+    EG              shift and go to state 11
+    A               shift and go to state 12
+    E               shift and go to state 13
+    LPAREN          shift and go to state 14
+
+    expression                     shift and go to state 19
+
+state 6
+
+    (9) expression -> AX . expression
+    (1) expression -> . TRUE
+    (2) expression -> . FALSE
+    (3) expression -> . VAR
+    (4) expression -> . NOT expression
+    (5) expression -> . expression AND expression
+    (6) expression -> . expression OR expression
+    (7) expression -> . expression IMPLIES expression
+    (8) expression -> . expression IFF expression
+    (9) expression -> . AX expression
+    (10) expression -> . EX expression
+    (11) expression -> . AF expression
+    (12) expression -> . EF expression
+    (13) expression -> . AG expression
+    (14) expression -> . EG expression
+    (15) expression -> . A LBRACKET expression U expression RBRACKET
+    (16) expression -> . E LBRACKET expression U expression RBRACKET
+    (17) expression -> . LPAREN expression RPAREN
+
+    TRUE            shift and go to state 2
+    FALSE           shift and go to state 3
+    VAR             shift and go to state 4
+    NOT             shift and go to state 5
+    AX              shift and go to state 6
+    EX              shift and go to state 7
+    AF              shift and go to state 8
+    EF              shift and go to state 9
+    AG              shift and go to state 10
+    EG              shift and go to state 11
+    A               shift and go to state 12
+    E               shift and go to state 13
+    LPAREN          shift and go to state 14
+
+    expression                     shift and go to state 20
+
+state 7
+
+    (10) expression -> EX . expression
+    (1) expression -> . TRUE
+    (2) expression -> . FALSE
+    (3) expression -> . VAR
+    (4) expression -> . NOT expression
+    (5) expression -> . expression AND expression
+    (6) expression -> . expression OR expression
+    (7) expression -> . expression IMPLIES expression
+    (8) expression -> . expression IFF expression
+    (9) expression -> . AX expression
+    (10) expression -> . EX expression
+    (11) expression -> . AF expression
+    (12) expression -> . EF expression
+    (13) expression -> . AG expression
+    (14) expression -> . EG expression
+    (15) expression -> . A LBRACKET expression U expression RBRACKET
+    (16) expression -> . E LBRACKET expression U expression RBRACKET
+    (17) expression -> . LPAREN expression RPAREN
+
+    TRUE            shift and go to state 2
+    FALSE           shift and go to state 3
+    VAR             shift and go to state 4
+    NOT             shift and go to state 5
+    AX              shift and go to state 6
+    EX              shift and go to state 7
+    AF              shift and go to state 8
+    EF              shift and go to state 9
+    AG              shift and go to state 10
+    EG              shift and go to state 11
+    A               shift and go to state 12
+    E               shift and go to state 13
+    LPAREN          shift and go to state 14
+
+    expression                     shift and go to state 21
+
+state 8
+
+    (11) expression -> AF . expression
+    (1) expression -> . TRUE
+    (2) expression -> . FALSE
+    (3) expression -> . VAR
+    (4) expression -> . NOT expression
+    (5) expression -> . expression AND expression
+    (6) expression -> . expression OR expression
+    (7) expression -> . expression IMPLIES expression
+    (8) expression -> . expression IFF expression
+    (9) expression -> . AX expression
+    (10) expression -> . EX expression
+    (11) expression -> . AF expression
+    (12) expression -> . EF expression
+    (13) expression -> . AG expression
+    (14) expression -> . EG expression
+    (15) expression -> . A LBRACKET expression U expression RBRACKET
+    (16) expression -> . E LBRACKET expression U expression RBRACKET
+    (17) expression -> . LPAREN expression RPAREN
+
+    TRUE            shift and go to state 2
+    FALSE           shift and go to state 3
+    VAR             shift and go to state 4
+    NOT             shift and go to state 5
+    AX              shift and go to state 6
+    EX              shift and go to state 7
+    AF              shift and go to state 8
+    EF              shift and go to state 9
+    AG              shift and go to state 10
+    EG              shift and go to state 11
+    A               shift and go to state 12
+    E               shift and go to state 13
+    LPAREN          shift and go to state 14
+
+    expression                     shift and go to state 22
+
+state 9
+
+    (12) expression -> EF . expression
+    (1) expression -> . TRUE
+    (2) expression -> . FALSE
+    (3) expression -> . VAR
+    (4) expression -> . NOT expression
+    (5) expression -> . expression AND expression
+    (6) expression -> . expression OR expression
+    (7) expression -> . expression IMPLIES expression
+    (8) expression -> . expression IFF expression
+    (9) expression -> . AX expression
+    (10) expression -> . EX expression
+    (11) expression -> . AF expression
+    (12) expression -> . EF expression
+    (13) expression -> . AG expression
+    (14) expression -> . EG expression
+    (15) expression -> . A LBRACKET expression U expression RBRACKET
+    (16) expression -> . E LBRACKET expression U expression RBRACKET
+    (17) expression -> . LPAREN expression RPAREN
+
+    TRUE            shift and go to state 2
+    FALSE           shift and go to state 3
+    VAR             shift and go to state 4
+    NOT             shift and go to state 5
+    AX              shift and go to state 6
+    EX              shift and go to state 7
+    AF              shift and go to state 8
+    EF              shift and go to state 9
+    AG              shift and go to state 10
+    EG              shift and go to state 11
+    A               shift and go to state 12
+    E               shift and go to state 13
+    LPAREN          shift and go to state 14
+
+    expression                     shift and go to state 23
+
+state 10
+
+    (13) expression -> AG . expression
+    (1) expression -> . TRUE
+    (2) expression -> . FALSE
+    (3) expression -> . VAR
+    (4) expression -> . NOT expression
+    (5) expression -> . expression AND expression
+    (6) expression -> . expression OR expression
+    (7) expression -> . expression IMPLIES expression
+    (8) expression -> . expression IFF expression
+    (9) expression -> . AX expression
+    (10) expression -> . EX expression
+    (11) expression -> . AF expression
+    (12) expression -> . EF expression
+    (13) expression -> . AG expression
+    (14) expression -> . EG expression
+    (15) expression -> . A LBRACKET expression U expression RBRACKET
+    (16) expression -> . E LBRACKET expression U expression RBRACKET
+    (17) expression -> . LPAREN expression RPAREN
+
+    TRUE            shift and go to state 2
+    FALSE           shift and go to state 3
+    VAR             shift and go to state 4
+    NOT             shift and go to state 5
+    AX              shift and go to state 6
+    EX              shift and go to state 7
+    AF              shift and go to state 8
+    EF              shift and go to state 9
+    AG              shift and go to state 10
+    EG              shift and go to state 11
+    A               shift and go to state 12
+    E               shift and go to state 13
+    LPAREN          shift and go to state 14
+
+    expression                     shift and go to state 24
+
+state 11
+
+    (14) expression -> EG . expression
+    (1) expression -> . TRUE
+    (2) expression -> . FALSE
+    (3) expression -> . VAR
+    (4) expression -> . NOT expression
+    (5) expression -> . expression AND expression
+    (6) expression -> . expression OR expression
+    (7) expression -> . expression IMPLIES expression
+    (8) expression -> . expression IFF expression
+    (9) expression -> . AX expression
+    (10) expression -> . EX expression
+    (11) expression -> . AF expression
+    (12) expression -> . EF expression
+    (13) expression -> . AG expression
+    (14) expression -> . EG expression
+    (15) expression -> . A LBRACKET expression U expression RBRACKET
+    (16) expression -> . E LBRACKET expression U expression RBRACKET
+    (17) expression -> . LPAREN expression RPAREN
+
+    TRUE            shift and go to state 2
+    FALSE           shift and go to state 3
+    VAR             shift and go to state 4
+    NOT             shift and go to state 5
+    AX              shift and go to state 6
+    EX              shift and go to state 7
+    AF              shift and go to state 8
+    EF              shift and go to state 9
+    AG              shift and go to state 10
+    EG              shift and go to state 11
+    A               shift and go to state 12
+    E               shift and go to state 13
+    LPAREN          shift and go to state 14
+
+    expression                     shift and go to state 25
+
+state 12
+
+    (15) expression -> A . LBRACKET expression U expression RBRACKET
+
+    LBRACKET        shift and go to state 26
+
+
+state 13
+
+    (16) expression -> E . LBRACKET expression U expression RBRACKET
+
+    LBRACKET        shift and go to state 27
+
+
+state 14
+
+    (17) expression -> LPAREN . expression RPAREN
+    (1) expression -> . TRUE
+    (2) expression -> . FALSE
+    (3) expression -> . VAR
+    (4) expression -> . NOT expression
+    (5) expression -> . expression AND expression
+    (6) expression -> . expression OR expression
+    (7) expression -> . expression IMPLIES expression
+    (8) expression -> . expression IFF expression
+    (9) expression -> . AX expression
+    (10) expression -> . EX expression
+    (11) expression -> . AF expression
+    (12) expression -> . EF expression
+    (13) expression -> . AG expression
+    (14) expression -> . EG expression
+    (15) expression -> . A LBRACKET expression U expression RBRACKET
+    (16) expression -> . E LBRACKET expression U expression RBRACKET
+    (17) expression -> . LPAREN expression RPAREN
+
+    TRUE            shift and go to state 2
+    FALSE           shift and go to state 3
+    VAR             shift and go to state 4
+    NOT             shift and go to state 5
+    AX              shift and go to state 6
+    EX              shift and go to state 7
+    AF              shift and go to state 8
+    EF              shift and go to state 9
+    AG              shift and go to state 10
+    EG              shift and go to state 11
+    A               shift and go to state 12
+    E               shift and go to state 13
+    LPAREN          shift and go to state 14
+
+    expression                     shift and go to state 28
+
+state 15
+
+    (5) expression -> expression AND . expression
+    (1) expression -> . TRUE
+    (2) expression -> . FALSE
+    (3) expression -> . VAR
+    (4) expression -> . NOT expression
+    (5) expression -> . expression AND expression
+    (6) expression -> . expression OR expression
+    (7) expression -> . expression IMPLIES expression
+    (8) expression -> . expression IFF expression
+    (9) expression -> . AX expression
+    (10) expression -> . EX expression
+    (11) expression -> . AF expression
+    (12) expression -> . EF expression
+    (13) expression -> . AG expression
+    (14) expression -> . EG expression
+    (15) expression -> . A LBRACKET expression U expression RBRACKET
+    (16) expression -> . E LBRACKET expression U expression RBRACKET
+    (17) expression -> . LPAREN expression RPAREN
+
+    TRUE            shift and go to state 2
+    FALSE           shift and go to state 3
+    VAR             shift and go to state 4
+    NOT             shift and go to state 5
+    AX              shift and go to state 6
+    EX              shift and go to state 7
+    AF              shift and go to state 8
+    EF              shift and go to state 9
+    AG              shift and go to state 10
+    EG              shift and go to state 11
+    A               shift and go to state 12
+    E               shift and go to state 13
+    LPAREN          shift and go to state 14
+
+    expression                     shift and go to state 29
+
+state 16
+
+    (6) expression -> expression OR . expression
+    (1) expression -> . TRUE
+    (2) expression -> . FALSE
+    (3) expression -> . VAR
+    (4) expression -> . NOT expression
+    (5) expression -> . expression AND expression
+    (6) expression -> . expression OR expression
+    (7) expression -> . expression IMPLIES expression
+    (8) expression -> . expression IFF expression
+    (9) expression -> . AX expression
+    (10) expression -> . EX expression
+    (11) expression -> . AF expression
+    (12) expression -> . EF expression
+    (13) expression -> . AG expression
+    (14) expression -> . EG expression
+    (15) expression -> . A LBRACKET expression U expression RBRACKET
+    (16) expression -> . E LBRACKET expression U expression RBRACKET
+    (17) expression -> . LPAREN expression RPAREN
+
+    TRUE            shift and go to state 2
+    FALSE           shift and go to state 3
+    VAR             shift and go to state 4
+    NOT             shift and go to state 5
+    AX              shift and go to state 6
+    EX              shift and go to state 7
+    AF              shift and go to state 8
+    EF              shift and go to state 9
+    AG              shift and go to state 10
+    EG              shift and go to state 11
+    A               shift and go to state 12
+    E               shift and go to state 13
+    LPAREN          shift and go to state 14
+
+    expression                     shift and go to state 30
+
+state 17
+
+    (7) expression -> expression IMPLIES . expression
+    (1) expression -> . TRUE
+    (2) expression -> . FALSE
+    (3) expression -> . VAR
+    (4) expression -> . NOT expression
+    (5) expression -> . expression AND expression
+    (6) expression -> . expression OR expression
+    (7) expression -> . expression IMPLIES expression
+    (8) expression -> . expression IFF expression
+    (9) expression -> . AX expression
+    (10) expression -> . EX expression
+    (11) expression -> . AF expression
+    (12) expression -> . EF expression
+    (13) expression -> . AG expression
+    (14) expression -> . EG expression
+    (15) expression -> . A LBRACKET expression U expression RBRACKET
+    (16) expression -> . E LBRACKET expression U expression RBRACKET
+    (17) expression -> . LPAREN expression RPAREN
+
+    TRUE            shift and go to state 2
+    FALSE           shift and go to state 3
+    VAR             shift and go to state 4
+    NOT             shift and go to state 5
+    AX              shift and go to state 6
+    EX              shift and go to state 7
+    AF              shift and go to state 8
+    EF              shift and go to state 9
+    AG              shift and go to state 10
+    EG              shift and go to state 11
+    A               shift and go to state 12
+    E               shift and go to state 13
+    LPAREN          shift and go to state 14
+
+    expression                     shift and go to state 31
+
+state 18
+
+    (8) expression -> expression IFF . expression
+    (1) expression -> . TRUE
+    (2) expression -> . FALSE
+    (3) expression -> . VAR
+    (4) expression -> . NOT expression
+    (5) expression -> . expression AND expression
+    (6) expression -> . expression OR expression
+    (7) expression -> . expression IMPLIES expression
+    (8) expression -> . expression IFF expression
+    (9) expression -> . AX expression
+    (10) expression -> . EX expression
+    (11) expression -> . AF expression
+    (12) expression -> . EF expression
+    (13) expression -> . AG expression
+    (14) expression -> . EG expression
+    (15) expression -> . A LBRACKET expression U expression RBRACKET
+    (16) expression -> . E LBRACKET expression U expression RBRACKET
+    (17) expression -> . LPAREN expression RPAREN
+
+    TRUE            shift and go to state 2
+    FALSE           shift and go to state 3
+    VAR             shift and go to state 4
+    NOT             shift and go to state 5
+    AX              shift and go to state 6
+    EX              shift and go to state 7
+    AF              shift and go to state 8
+    EF              shift and go to state 9
+    AG              shift and go to state 10
+    EG              shift and go to state 11
+    A               shift and go to state 12
+    E               shift and go to state 13
+    LPAREN          shift and go to state 14
+
+    expression                     shift and go to state 32
+
+state 19
+
+    (4) expression -> NOT expression .
+    (5) expression -> expression . AND expression
+    (6) expression -> expression . OR expression
+    (7) expression -> expression . IMPLIES expression
+    (8) expression -> expression . IFF expression
+
+    AND             reduce using rule 4 (expression -> NOT expression .)
+    OR              reduce using rule 4 (expression -> NOT expression .)
+    IMPLIES         reduce using rule 4 (expression -> NOT expression .)
+    IFF             reduce using rule 4 (expression -> NOT expression .)
+    $end            reduce using rule 4 (expression -> NOT expression .)
+    RPAREN          reduce using rule 4 (expression -> NOT expression .)
+    U               reduce using rule 4 (expression -> NOT expression .)
+    RBRACKET        reduce using rule 4 (expression -> NOT expression .)
+
+  ! AND             [ shift and go to state 15 ]
+  ! OR              [ shift and go to state 16 ]
+  ! IMPLIES         [ shift and go to state 17 ]
+  ! IFF             [ shift and go to state 18 ]
+
+
+state 20
+
+    (9) expression -> AX expression .
+    (5) expression -> expression . AND expression
+    (6) expression -> expression . OR expression
+    (7) expression -> expression . IMPLIES expression
+    (8) expression -> expression . IFF expression
+
+    IMPLIES         reduce using rule 9 (expression -> AX expression .)
+    IFF             reduce using rule 9 (expression -> AX expression .)
+    $end            reduce using rule 9 (expression -> AX expression .)
+    RPAREN          reduce using rule 9 (expression -> AX expression .)
+    U               reduce using rule 9 (expression -> AX expression .)
+    RBRACKET        reduce using rule 9 (expression -> AX expression .)
+    AND             shift and go to state 15
+    OR              shift and go to state 16
+
+  ! AND             [ reduce using rule 9 (expression -> AX expression .) ]
+  ! OR              [ reduce using rule 9 (expression -> AX expression .) ]
+  ! IMPLIES         [ shift and go to state 17 ]
+  ! IFF             [ shift and go to state 18 ]
+
+
+state 21
+
+    (10) expression -> EX expression .
+    (5) expression -> expression . AND expression
+    (6) expression -> expression . OR expression
+    (7) expression -> expression . IMPLIES expression
+    (8) expression -> expression . IFF expression
+
+    IMPLIES         reduce using rule 10 (expression -> EX expression .)
+    IFF             reduce using rule 10 (expression -> EX expression .)
+    $end            reduce using rule 10 (expression -> EX expression .)
+    RPAREN          reduce using rule 10 (expression -> EX expression .)
+    U               reduce using rule 10 (expression -> EX expression .)
+    RBRACKET        reduce using rule 10 (expression -> EX expression .)
+    AND             shift and go to state 15
+    OR              shift and go to state 16
+
+  ! AND             [ reduce using rule 10 (expression -> EX expression .) ]
+  ! OR              [ reduce using rule 10 (expression -> EX expression .) ]
+  ! IMPLIES         [ shift and go to state 17 ]
+  ! IFF             [ shift and go to state 18 ]
+
+
+state 22
+
+    (11) expression -> AF expression .
+    (5) expression -> expression . AND expression
+    (6) expression -> expression . OR expression
+    (7) expression -> expression . IMPLIES expression
+    (8) expression -> expression . IFF expression
+
+    IMPLIES         reduce using rule 11 (expression -> AF expression .)
+    IFF             reduce using rule 11 (expression -> AF expression .)
+    $end            reduce using rule 11 (expression -> AF expression .)
+    RPAREN          reduce using rule 11 (expression -> AF expression .)
+    U               reduce using rule 11 (expression -> AF expression .)
+    RBRACKET        reduce using rule 11 (expression -> AF expression .)
+    AND             shift and go to state 15
+    OR              shift and go to state 16
+
+  ! AND             [ reduce using rule 11 (expression -> AF expression .) ]
+  ! OR              [ reduce using rule 11 (expression -> AF expression .) ]
+  ! IMPLIES         [ shift and go to state 17 ]
+  ! IFF             [ shift and go to state 18 ]
+
+
+state 23
+
+    (12) expression -> EF expression .
+    (5) expression -> expression . AND expression
+    (6) expression -> expression . OR expression
+    (7) expression -> expression . IMPLIES expression
+    (8) expression -> expression . IFF expression
+
+    IMPLIES         reduce using rule 12 (expression -> EF expression .)
+    IFF             reduce using rule 12 (expression -> EF expression .)
+    $end            reduce using rule 12 (expression -> EF expression .)
+    RPAREN          reduce using rule 12 (expression -> EF expression .)
+    U               reduce using rule 12 (expression -> EF expression .)
+    RBRACKET        reduce using rule 12 (expression -> EF expression .)
+    AND             shift and go to state 15
+    OR              shift and go to state 16
+
+  ! AND             [ reduce using rule 12 (expression -> EF expression .) ]
+  ! OR              [ reduce using rule 12 (expression -> EF expression .) ]
+  ! IMPLIES         [ shift and go to state 17 ]
+  ! IFF             [ shift and go to state 18 ]
+
+
+state 24
+
+    (13) expression -> AG expression .
+    (5) expression -> expression . AND expression
+    (6) expression -> expression . OR expression
+    (7) expression -> expression . IMPLIES expression
+    (8) expression -> expression . IFF expression
+
+    IMPLIES         reduce using rule 13 (expression -> AG expression .)
+    IFF             reduce using rule 13 (expression -> AG expression .)
+    $end            reduce using rule 13 (expression -> AG expression .)
+    RPAREN          reduce using rule 13 (expression -> AG expression .)
+    U               reduce using rule 13 (expression -> AG expression .)
+    RBRACKET        reduce using rule 13 (expression -> AG expression .)
+    AND             shift and go to state 15
+    OR              shift and go to state 16
+
+  ! AND             [ reduce using rule 13 (expression -> AG expression .) ]
+  ! OR              [ reduce using rule 13 (expression -> AG expression .) ]
+  ! IMPLIES         [ shift and go to state 17 ]
+  ! IFF             [ shift and go to state 18 ]
+
+
+state 25
+
+    (14) expression -> EG expression .
+    (5) expression -> expression . AND expression
+    (6) expression -> expression . OR expression
+    (7) expression -> expression . IMPLIES expression
+    (8) expression -> expression . IFF expression
+
+    IMPLIES         reduce using rule 14 (expression -> EG expression .)
+    IFF             reduce using rule 14 (expression -> EG expression .)
+    $end            reduce using rule 14 (expression -> EG expression .)
+    RPAREN          reduce using rule 14 (expression -> EG expression .)
+    U               reduce using rule 14 (expression -> EG expression .)
+    RBRACKET        reduce using rule 14 (expression -> EG expression .)
+    AND             shift and go to state 15
+    OR              shift and go to state 16
+
+  ! AND             [ reduce using rule 14 (expression -> EG expression .) ]
+  ! OR              [ reduce using rule 14 (expression -> EG expression .) ]
+  ! IMPLIES         [ shift and go to state 17 ]
+  ! IFF             [ shift and go to state 18 ]
+
+
+state 26
+
+    (15) expression -> A LBRACKET . expression U expression RBRACKET
+    (1) expression -> . TRUE
+    (2) expression -> . FALSE
+    (3) expression -> . VAR
+    (4) expression -> . NOT expression
+    (5) expression -> . expression AND expression
+    (6) expression -> . expression OR expression
+    (7) expression -> . expression IMPLIES expression
+    (8) expression -> . expression IFF expression
+    (9) expression -> . AX expression
+    (10) expression -> . EX expression
+    (11) expression -> . AF expression
+    (12) expression -> . EF expression
+    (13) expression -> . AG expression
+    (14) expression -> . EG expression
+    (15) expression -> . A LBRACKET expression U expression RBRACKET
+    (16) expression -> . E LBRACKET expression U expression RBRACKET
+    (17) expression -> . LPAREN expression RPAREN
+
+    TRUE            shift and go to state 2
+    FALSE           shift and go to state 3
+    VAR             shift and go to state 4
+    NOT             shift and go to state 5
+    AX              shift and go to state 6
+    EX              shift and go to state 7
+    AF              shift and go to state 8
+    EF              shift and go to state 9
+    AG              shift and go to state 10
+    EG              shift and go to state 11
+    A               shift and go to state 12
+    E               shift and go to state 13
+    LPAREN          shift and go to state 14
+
+    expression                     shift and go to state 33
+
+state 27
+
+    (16) expression -> E LBRACKET . expression U expression RBRACKET
+    (1) expression -> . TRUE
+    (2) expression -> . FALSE
+    (3) expression -> . VAR
+    (4) expression -> . NOT expression
+    (5) expression -> . expression AND expression
+    (6) expression -> . expression OR expression
+    (7) expression -> . expression IMPLIES expression
+    (8) expression -> . expression IFF expression
+    (9) expression -> . AX expression
+    (10) expression -> . EX expression
+    (11) expression -> . AF expression
+    (12) expression -> . EF expression
+    (13) expression -> . AG expression
+    (14) expression -> . EG expression
+    (15) expression -> . A LBRACKET expression U expression RBRACKET
+    (16) expression -> . E LBRACKET expression U expression RBRACKET
+    (17) expression -> . LPAREN expression RPAREN
+
+    TRUE            shift and go to state 2
+    FALSE           shift and go to state 3
+    VAR             shift and go to state 4
+    NOT             shift and go to state 5
+    AX              shift and go to state 6
+    EX              shift and go to state 7
+    AF              shift and go to state 8
+    EF              shift and go to state 9
+    AG              shift and go to state 10
+    EG              shift and go to state 11
+    A               shift and go to state 12
+    E               shift and go to state 13
+    LPAREN          shift and go to state 14
+
+    expression                     shift and go to state 34
+
+state 28
+
+    (17) expression -> LPAREN expression . RPAREN
+    (5) expression -> expression . AND expression
+    (6) expression -> expression . OR expression
+    (7) expression -> expression . IMPLIES expression
+    (8) expression -> expression . IFF expression
+
+    RPAREN          shift and go to state 35
+    AND             shift and go to state 15
+    OR              shift and go to state 16
+    IMPLIES         shift and go to state 17
+    IFF             shift and go to state 18
+
+
+state 29
+
+    (5) expression -> expression AND expression .
+    (5) expression -> expression . AND expression
+    (6) expression -> expression . OR expression
+    (7) expression -> expression . IMPLIES expression
+    (8) expression -> expression . IFF expression
+
+    AND             reduce using rule 5 (expression -> expression AND expression .)
+    OR              reduce using rule 5 (expression -> expression AND expression .)
+    IMPLIES         reduce using rule 5 (expression -> expression AND expression .)
+    IFF             reduce using rule 5 (expression -> expression AND expression .)
+    $end            reduce using rule 5 (expression -> expression AND expression .)
+    RPAREN          reduce using rule 5 (expression -> expression AND expression .)
+    U               reduce using rule 5 (expression -> expression AND expression .)
+    RBRACKET        reduce using rule 5 (expression -> expression AND expression .)
+
+  ! AND             [ shift and go to state 15 ]
+  ! OR              [ shift and go to state 16 ]
+  ! IMPLIES         [ shift and go to state 17 ]
+  ! IFF             [ shift and go to state 18 ]
+
+
+state 30
+
+    (6) expression -> expression OR expression .
+    (5) expression -> expression . AND expression
+    (6) expression -> expression . OR expression
+    (7) expression -> expression . IMPLIES expression
+    (8) expression -> expression . IFF expression
+
+    OR              reduce using rule 6 (expression -> expression OR expression .)
+    IMPLIES         reduce using rule 6 (expression -> expression OR expression .)
+    IFF             reduce using rule 6 (expression -> expression OR expression .)
+    $end            reduce using rule 6 (expression -> expression OR expression .)
+    RPAREN          reduce using rule 6 (expression -> expression OR expression .)
+    U               reduce using rule 6 (expression -> expression OR expression .)
+    RBRACKET        reduce using rule 6 (expression -> expression OR expression .)
+    AND             shift and go to state 15
+
+  ! AND             [ reduce using rule 6 (expression -> expression OR expression .) ]
+  ! OR              [ shift and go to state 16 ]
+  ! IMPLIES         [ shift and go to state 17 ]
+  ! IFF             [ shift and go to state 18 ]
+
+
+state 31
+
+    (7) expression -> expression IMPLIES expression .
+    (5) expression -> expression . AND expression
+    (6) expression -> expression . OR expression
+    (7) expression -> expression . IMPLIES expression
+    (8) expression -> expression . IFF expression
+
+    IMPLIES         reduce using rule 7 (expression -> expression IMPLIES expression .)
+    IFF             reduce using rule 7 (expression -> expression IMPLIES expression .)
+    $end            reduce using rule 7 (expression -> expression IMPLIES expression .)
+    RPAREN          reduce using rule 7 (expression -> expression IMPLIES expression .)
+    U               reduce using rule 7 (expression -> expression IMPLIES expression .)
+    RBRACKET        reduce using rule 7 (expression -> expression IMPLIES expression .)
+    AND             shift and go to state 15
+    OR              shift and go to state 16
+
+  ! AND             [ reduce using rule 7 (expression -> expression IMPLIES expression .) ]
+  ! OR              [ reduce using rule 7 (expression -> expression IMPLIES expression .) ]
+  ! IMPLIES         [ shift and go to state 17 ]
+  ! IFF             [ shift and go to state 18 ]
+
+
+state 32
+
+    (8) expression -> expression IFF expression .
+    (5) expression -> expression . AND expression
+    (6) expression -> expression . OR expression
+    (7) expression -> expression . IMPLIES expression
+    (8) expression -> expression . IFF expression
+
+    IFF             reduce using rule 8 (expression -> expression IFF expression .)
+    $end            reduce using rule 8 (expression -> expression IFF expression .)
+    RPAREN          reduce using rule 8 (expression -> expression IFF expression .)
+    U               reduce using rule 8 (expression -> expression IFF expression .)
+    RBRACKET        reduce using rule 8 (expression -> expression IFF expression .)
+    AND             shift and go to state 15
+    OR              shift and go to state 16
+    IMPLIES         shift and go to state 17
+
+  ! AND             [ reduce using rule 8 (expression -> expression IFF expression .) ]
+  ! OR              [ reduce using rule 8 (expression -> expression IFF expression .) ]
+  ! IMPLIES         [ reduce using rule 8 (expression -> expression IFF expression .) ]
+  ! IFF             [ shift and go to state 18 ]
+
+
+state 33
+
+    (15) expression -> A LBRACKET expression . U expression RBRACKET
+    (5) expression -> expression . AND expression
+    (6) expression -> expression . OR expression
+    (7) expression -> expression . IMPLIES expression
+    (8) expression -> expression . IFF expression
+
+    U               shift and go to state 36
+    AND             shift and go to state 15
+    OR              shift and go to state 16
+    IMPLIES         shift and go to state 17
+    IFF             shift and go to state 18
+
+
+state 34
+
+    (16) expression -> E LBRACKET expression . U expression RBRACKET
+    (5) expression -> expression . AND expression
+    (6) expression -> expression . OR expression
+    (7) expression -> expression . IMPLIES expression
+    (8) expression -> expression . IFF expression
+
+    U               shift and go to state 37
+    AND             shift and go to state 15
+    OR              shift and go to state 16
+    IMPLIES         shift and go to state 17
+    IFF             shift and go to state 18
+
+
+state 35
+
+    (17) expression -> LPAREN expression RPAREN .
+
+    AND             reduce using rule 17 (expression -> LPAREN expression RPAREN .)
+    OR              reduce using rule 17 (expression -> LPAREN expression RPAREN .)
+    IMPLIES         reduce using rule 17 (expression -> LPAREN expression RPAREN .)
+    IFF             reduce using rule 17 (expression -> LPAREN expression RPAREN .)
+    $end            reduce using rule 17 (expression -> LPAREN expression RPAREN .)
+    RPAREN          reduce using rule 17 (expression -> LPAREN expression RPAREN .)
+    U               reduce using rule 17 (expression -> LPAREN expression RPAREN .)
+    RBRACKET        reduce using rule 17 (expression -> LPAREN expression RPAREN .)
+
+
+state 36
+
+    (15) expression -> A LBRACKET expression U . expression RBRACKET
+    (1) expression -> . TRUE
+    (2) expression -> . FALSE
+    (3) expression -> . VAR
+    (4) expression -> . NOT expression
+    (5) expression -> . expression AND expression
+    (6) expression -> . expression OR expression
+    (7) expression -> . expression IMPLIES expression
+    (8) expression -> . expression IFF expression
+    (9) expression -> . AX expression
+    (10) expression -> . EX expression
+    (11) expression -> . AF expression
+    (12) expression -> . EF expression
+    (13) expression -> . AG expression
+    (14) expression -> . EG expression
+    (15) expression -> . A LBRACKET expression U expression RBRACKET
+    (16) expression -> . E LBRACKET expression U expression RBRACKET
+    (17) expression -> . LPAREN expression RPAREN
+
+    TRUE            shift and go to state 2
+    FALSE           shift and go to state 3
+    VAR             shift and go to state 4
+    NOT             shift and go to state 5
+    AX              shift and go to state 6
+    EX              shift and go to state 7
+    AF              shift and go to state 8
+    EF              shift and go to state 9
+    AG              shift and go to state 10
+    EG              shift and go to state 11
+    A               shift and go to state 12
+    E               shift and go to state 13
+    LPAREN          shift and go to state 14
+
+    expression                     shift and go to state 38
+
+state 37
+
+    (16) expression -> E LBRACKET expression U . expression RBRACKET
+    (1) expression -> . TRUE
+    (2) expression -> . FALSE
+    (3) expression -> . VAR
+    (4) expression -> . NOT expression
+    (5) expression -> . expression AND expression
+    (6) expression -> . expression OR expression
+    (7) expression -> . expression IMPLIES expression
+    (8) expression -> . expression IFF expression
+    (9) expression -> . AX expression
+    (10) expression -> . EX expression
+    (11) expression -> . AF expression
+    (12) expression -> . EF expression
+    (13) expression -> . AG expression
+    (14) expression -> . EG expression
+    (15) expression -> . A LBRACKET expression U expression RBRACKET
+    (16) expression -> . E LBRACKET expression U expression RBRACKET
+    (17) expression -> . LPAREN expression RPAREN
+
+    TRUE            shift and go to state 2
+    FALSE           shift and go to state 3
+    VAR             shift and go to state 4
+    NOT             shift and go to state 5
+    AX              shift and go to state 6
+    EX              shift and go to state 7
+    AF              shift and go to state 8
+    EF              shift and go to state 9
+    AG              shift and go to state 10
+    EG              shift and go to state 11
+    A               shift and go to state 12
+    E               shift and go to state 13
+    LPAREN          shift and go to state 14
+
+    expression                     shift and go to state 39
+
+state 38
+
+    (15) expression -> A LBRACKET expression U expression . RBRACKET
+    (5) expression -> expression . AND expression
+    (6) expression -> expression . OR expression
+    (7) expression -> expression . IMPLIES expression
+    (8) expression -> expression . IFF expression
+
+    RBRACKET        shift and go to state 40
+    AND             shift and go to state 15
+    OR              shift and go to state 16
+    IMPLIES         shift and go to state 17
+    IFF             shift and go to state 18
+
+
+state 39
+
+    (16) expression -> E LBRACKET expression U expression . RBRACKET
+    (5) expression -> expression . AND expression
+    (6) expression -> expression . OR expression
+    (7) expression -> expression . IMPLIES expression
+    (8) expression -> expression . IFF expression
+
+    RBRACKET        shift and go to state 41
+    AND             shift and go to state 15
+    OR              shift and go to state 16
+    IMPLIES         shift and go to state 17
+    IFF             shift and go to state 18
+
+
+state 40
+
+    (15) expression -> A LBRACKET expression U expression RBRACKET .
+
+    AND             reduce using rule 15 (expression -> A LBRACKET expression U expression RBRACKET .)
+    OR              reduce using rule 15 (expression -> A LBRACKET expression U expression RBRACKET .)
+    IMPLIES         reduce using rule 15 (expression -> A LBRACKET expression U expression RBRACKET .)
+    IFF             reduce using rule 15 (expression -> A LBRACKET expression U expression RBRACKET .)
+    $end            reduce using rule 15 (expression -> A LBRACKET expression U expression RBRACKET .)
+    RPAREN          reduce using rule 15 (expression -> A LBRACKET expression U expression RBRACKET .)
+    U               reduce using rule 15 (expression -> A LBRACKET expression U expression RBRACKET .)
+    RBRACKET        reduce using rule 15 (expression -> A LBRACKET expression U expression RBRACKET .)
+
+
+state 41
+
+    (16) expression -> E LBRACKET expression U expression RBRACKET .
+
+    AND             reduce using rule 16 (expression -> E LBRACKET expression U expression RBRACKET .)
+    OR              reduce using rule 16 (expression -> E LBRACKET expression U expression RBRACKET .)
+    IMPLIES         reduce using rule 16 (expression -> E LBRACKET expression U expression RBRACKET .)
+    IFF             reduce using rule 16 (expression -> E LBRACKET expression U expression RBRACKET .)
+    $end            reduce using rule 16 (expression -> E LBRACKET expression U expression RBRACKET .)
+    RPAREN          reduce using rule 16 (expression -> E LBRACKET expression U expression RBRACKET .)
+    U               reduce using rule 16 (expression -> E LBRACKET expression U expression RBRACKET .)
+    RBRACKET        reduce using rule 16 (expression -> E LBRACKET expression U expression RBRACKET .)
+

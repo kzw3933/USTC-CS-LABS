@@ -1,0 +1,161 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C26451",
+          "message": {
+            "text": "算术溢出: 使用 4 字节值上的运算符 - ，然后将结果转换到 8 字节值。在调用运算符 - 之前将值强制转换为宽类型可避免溢出(io.2)。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///C:/Users/Administrator/Desktop/z3-solver/smt_solve.cpp"
+                },
+                "region": {
+                  "startLine": 56,
+                  "startColumn": 49,
+                  "endLine": 56,
+                  "endColumn": 55
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "knapsack",
+                  "decoratedName": "?knapsack@@YAXAEBV?$vector@HV?$allocator@H@std@@@std@@0H@Z",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.34.31937.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///C:/Users/Administrator/Desktop/z3-solver/smt_solve.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "a2dccced10f502dbc376c4e82f8ab789213e7440e17e2d8a810d59029be6e2f6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/administrator/desktop/z3-solver/include/z3++.h"
+          },
+          "hashes": {
+            "sha-256": "6462d332389ed1e6984536368c30ae82f8b1174ad0e40ee98146496c401f3b4c"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/administrator/desktop/z3-solver/include/z3.h"
+          },
+          "hashes": {
+            "sha-256": "0d32aa290f05a005eff05f7baf78d3ecd4958b201c214d080fd2bef53b527272"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/administrator/desktop/z3-solver/include/z3_macros.h"
+          },
+          "hashes": {
+            "sha-256": "9d92f8136abef10dd8429a28fd9068e9b3e4feb5696072763cd8d0edc1f00b24"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/administrator/desktop/z3-solver/include/z3_api.h"
+          },
+          "hashes": {
+            "sha-256": "4ba9de600c618895365ce28da37e9332df5d8a3d78c938ca62f6633eefbfe5d6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/administrator/desktop/z3-solver/include/z3_ast_containers.h"
+          },
+          "hashes": {
+            "sha-256": "6687f3ec9483f3774b8951be0f9944ab47f61bedbd42193d075dd88c612fb248"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/administrator/desktop/z3-solver/include/z3_algebraic.h"
+          },
+          "hashes": {
+            "sha-256": "7659d6dec25e49e2dd6546a6ca6c05adb27437a989d857af0cbcc7191adb45a6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/administrator/desktop/z3-solver/include/z3_polynomial.h"
+          },
+          "hashes": {
+            "sha-256": "e1894c40edb37115cf221a8ef2f7e5557c7360c3c0583f05582f849ebdd78c36"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/administrator/desktop/z3-solver/include/z3_rcf.h"
+          },
+          "hashes": {
+            "sha-256": "9b0c1f2b9fd4bb538f9a8978d61fcd1fcfa6e89582528489f6e331d903dbebbd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/administrator/desktop/z3-solver/include/z3_fixedpoint.h"
+          },
+          "hashes": {
+            "sha-256": "cc8a424163dd6a92a1bfe07dea68edb8fc8dabb58f612b1e85a033a21178dedc"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/administrator/desktop/z3-solver/include/z3_optimization.h"
+          },
+          "hashes": {
+            "sha-256": "b74ccaab7d0aa5d8d2bb1ff17efa8557c8b8f756b2ca4c577678bf00c85139ae"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/administrator/desktop/z3-solver/include/z3_fpa.h"
+          },
+          "hashes": {
+            "sha-256": "9f7e86a8d8c692dc72c50bff559a13ae71f6d5067e2c14b24dbbcbc4c4adaef6"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/users/administrator/desktop/z3-solver/include/z3_spacer.h"
+          },
+          "hashes": {
+            "sha-256": "2d8fd795360e3d92dd0a8ea12666652f51c64cf76b0a2be0f5fcf33c56314d53"
+          }
+        }
+      ]
+    }
+  ]
+}

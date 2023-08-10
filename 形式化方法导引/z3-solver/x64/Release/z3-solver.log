@@ -1,0 +1,9 @@
+﻿  smt_solve.cpp
+C:\Users\Administrator\Desktop\z3-solver\smt_solve.cpp(179,82): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\Administrator\Desktop\z3-solver\smt_solve.cpp(274,82): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  正在生成代码
+  410 of 410 functions (100.0%) were compiled.
+    106 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  z3-solver.vcxproj -> C:\Users\Administrator\Desktop\z3-solver\x64\Release\z3-solver.exe

@@ -1,0 +1,11 @@
+Lemma ex2 : forall A B : Prop, A \/ B -> ~ (~A /\ ~B).
+Proof.
+  intro h1.
+  intro h2.
+  intro h3.
+  intro h4.
+  destruct h4 as (h41 , h42).
+  destruct h3 as [h31 | h32].
+  - apply h41. assumption.
+  - apply h42. assumption.
+Qed.
