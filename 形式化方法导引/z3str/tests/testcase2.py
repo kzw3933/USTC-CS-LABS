@@ -1,5 +1,5 @@
 import sys
-sys.path.append("/home/jack/Desktop/class-labs/fm/z3-str*/")
+sys.path.append("/home/jack/Desktop/class-labs/fm/z3str/")
 
 from zvar import Var
 from zstr import Str
